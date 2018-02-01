@@ -3,14 +3,24 @@
  * This is my first java program using GIT in Eclipse
  */
 
+import java.util.Scanner;
+
 public class Main 
 {	
    public static void main(String[] args)
    {
-      Sum sum = new Sum(4,3);	  
+	  int[] nums = new int[2]; // holds two values to be summed
+	  Scanner keyboard = new Scanner(System.in); //used to take in data from the user
+	  System.out.print("Please enter an integer: ");
+	  nums[0] = keyboard.nextInt();
+	  System.out.print("Please enter another integer: ");
+	  nums[1] = keyboard.nextInt();
+	  
+      Sum sum = new Sum(nums[0],nums[1]);	  
 	  
 	  sum.calcSum();
       goodbye();
+      keyboard.close();
    }
    
    private static void goodbye()
