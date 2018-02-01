@@ -16,9 +16,12 @@ public class Main
 	  System.out.print("Please enter another integer: ");
 	  nums[1] = keyboard.nextInt();
 	  
-      Sum sum = new Sum(nums[0],nums[1]);	  
+      Calc calc = new Calc(nums[0],nums[1]);	  
 	  
-	  sum.calcSum();
+	  calc.sum();
+	  calc.diff();
+	  calc.mult();
+	  calc.div();
       goodbye();
       keyboard.close();
    }
